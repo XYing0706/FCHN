@@ -1,0 +1,41 @@
+project_root: C:\XY\FedTopo-Brain\CHyCR_20260621\FCHN_20260825
+stage_a_manifest: outputs/stage_a/stage_a_manifest.json
+stage_a_success: outputs/stage_a/_SUCCESS
+atlases:
+  - HO112
+  - AAL116
+  - Dosenbach160
+  - CC200
+disease_datasets:
+  - adhd
+  - abide
+  - abide2
+  - mdd
+protocols:
+  - LOSO
+  - pooled10_site_label
+variant: main
+seed: 20260625
+seed_source: C:\XY\FedTopo-Brain\CHyCR_20260621\configs\fchn_latefusion.toml
+outer:
+  pooled_splits: 10
+  pooled_strata: [site_id, label]
+inner:
+  requested_splits: 5
+  requested_strata: [site_id, label]
+  fallback_splits: 2
+  fallback_strata: [label]
+  minimum_train_per_class: 10
+nested_plan:
+  base_oof: true
+  base_c_tuning: true
+  strict_meta_oof: true
+  membership_storage: hash_reconstruct
+identity:
+  cross_dataset_key: [dataset_id, sample_key]
+  fold_index_base: 0
+  task_id_separator: "__"
+storage:
+  group_pattern: outputs/splits/{atlas}/{dataset}/{protocol}
+  copy_demographics: false
+  copy_fc: false

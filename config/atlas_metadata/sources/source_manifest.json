@@ -1,0 +1,101 @@
+{
+  "access_date": "2026-08-26",
+  "atlases": [
+    "HO112",
+    "AAL116",
+    "Dosenbach160",
+    "CC200"
+  ],
+  "citations": {
+    "AAL116": "Tzourio-Mazoyer et al. 2002, doi:10.1006/nimg.2001.0978",
+    "CC200": "Craddock et al. 2012, doi:10.1002/hbm.21333",
+    "DPABI": "Yan et al. 2016, doi:10.1007/s12021-016-9299-4",
+    "Dosenbach160": "Dosenbach et al. 2010, doi:10.1126/science.1185718",
+    "HO112": "Harvard-Oxford distributed via DPABI/FSL; project order is YCG 96+16"
+  },
+  "dpabi_repository": "https://github.com/Chaogan-Yan/DPABI",
+  "dpabi_tree_sha": "8d4b16e46be65cce93662e34e1cfa22bd40d98dc",
+  "files": [
+    {
+      "bytes": 7109489,
+      "relative_path": "dpabi/aal.nii",
+      "sha256": "2926fcc98efc709f77c8cca2f9c1d797eba3e9a1b222a8e0cfa70ab131394c80"
+    },
+    {
+      "bytes": 4320,
+      "relative_path": "dpabi/aal_Labels.mat",
+      "sha256": "9cf75aa1026c0ad8ff7237e0bbc8c0ca4f7c4039a050dc8a21a7216d19033569"
+    },
+    {
+      "bytes": 242496,
+      "relative_path": "dpabi/CC200ROI_tcorr05_2level_all.nii",
+      "sha256": "098bef48d6d680b345fc95608898a503af1336ca33383e93f73b45bb78aeffea"
+    },
+    {
+      "bytes": 42,
+      "relative_path": "dpabi/COMMIT.txt",
+      "sha256": "60a26ee642649deb70160c3397016255ecb9654c4b9677f3982a21478294c98c"
+    },
+    {
+      "bytes": 182560,
+      "relative_path": "dpabi/Dosenbach_Science_160ROIs_Center.mat",
+      "sha256": "f51dd273552f51074f1d7ae6c15b5d198fbc0c02073cdfa72e1fb4b6dcbdb23a"
+    },
+    {
+      "bytes": 6989,
+      "relative_path": "dpabi/Dosenbach_Science_160ROIs_Info.mat",
+      "sha256": "13a21a38552a857b7602dd924533b46df666d908f569eb76bcc8b5d0febd56af"
+    },
+    {
+      "bytes": 271985,
+      "relative_path": "dpabi/Dosenbach_Science_160ROIs_Radius5_Mask.nii",
+      "sha256": "17705aaf9991b0549314896c16d245e42185b30b81151ebdc946c749b44df870"
+    },
+    {
+      "bytes": 26515,
+      "relative_path": "dpabi/LICENSE",
+      "sha256": "119e845bd71d420893cdf2800fd78f7a47932858bc3cad3072557227e3a47a6f"
+    },
+    {
+      "bytes": 967,
+      "relative_path": "dpabi/README.md",
+      "sha256": "f9d905b879dcec32d30721f3c5d670ec7b134eb4cf29525fd6d84322ab8c1892"
+    },
+    {
+      "bytes": 1805610,
+      "relative_path": "ho112_verified_local/HarvardOxford-cort-maxprob-thr25-2mm_YCG.nii",
+      "sha256": "c0b10df6ce66988e2d87bee067bd7badaf80506a1dd63b3c38b1dcac28423109"
+    },
+    {
+      "bytes": 3976,
+      "relative_path": "ho112_verified_local/HarvardOxford-cort-maxprob-thr25-2mm_YCG_Labels.mat",
+      "sha256": "46193127eb5b88c6ddaa9cffb1217a49d0306308888314abc22bc43a70ae1058"
+    },
+    {
+      "bytes": 1805610,
+      "relative_path": "ho112_verified_local/HarvardOxford-sub-maxprob-thr25-2mm_YCG.nii",
+      "sha256": "0c3c54925c0e1528118c32eeaa33d2c56d396e5512620a0ca35606a5c72aecb8"
+    },
+    {
+      "bytes": 851,
+      "relative_path": "ho112_verified_local/HarvardOxford-sub-maxprob-thr25-2mm_YCG_Labels.mat",
+      "sha256": "30b0006f37fecedc03560f70d6baa7ba7026e158f8634df94cf101086c3c618d"
+    },
+    {
+      "bytes": 44549,
+      "relative_path": "ho112_verified_local/HarvardOxford_Atlas_NewIndex_YCG.xlsx",
+      "sha256": "61641810e4d9b01b6bc1770d6c69e23bacbb06a06ce7eab65ffb9e2fcb0036d7"
+    },
+    {
+      "bytes": 5603,
+      "relative_path": "ho112_verified_local/ho112_dpabi_labels.csv",
+      "sha256": "9b8780032f6fc5b40a784a7aff91988978409e0521c20f0dcc1161b1bbecd077"
+    },
+    {
+      "bytes": 2511,
+      "relative_path": "ho112_verified_local/SOURCES.md",
+      "sha256": "6fadf30a3c95366cc7c3dcd0c8f1d215ce315433aca0abbc1b93bf31f6e4aad0"
+    }
+  ],
+  "license": "LGPL-2.1; see dpabi/LICENSE"
+}

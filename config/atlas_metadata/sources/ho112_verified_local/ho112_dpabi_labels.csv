@@ -1,0 +1,113 @@
+atlas_value,roi_index,roi_name,anatomical_class
+10,0,Frontal Pole (L),cortical
+11,1,Frontal Pole (R),cortical
+20,2,Insular Cortex (L),cortical
+21,3,Insular Cortex (R),cortical
+30,4,Superior Frontal Gyrus (L),cortical
+31,5,Superior Frontal Gyrus (R),cortical
+40,6,Middle Frontal Gyrus (L),cortical
+41,7,Middle Frontal Gyrus (R),cortical
+50,8,"Inferior Frontal Gyrus, pars triangularis (L)",cortical
+51,9,"Inferior Frontal Gyrus, pars triangularis (R)",cortical
+60,10,"Inferior Frontal Gyrus, pars opercularis (L)",cortical
+61,11,"Inferior Frontal Gyrus, pars opercularis (R)",cortical
+70,12,Precentral Gyrus (L),cortical
+71,13,Precentral Gyrus (R),cortical
+80,14,Temporal Pole (L),cortical
+81,15,Temporal Pole (R),cortical
+90,16,"Superior Temporal Gyrus, anterior division (L)",cortical
+91,17,"Superior Temporal Gyrus, anterior division (R)",cortical
+100,18,"Superior Temporal Gyrus, posterior division (L)",cortical
+101,19,"Superior Temporal Gyrus, posterior division (R)",cortical
+110,20,"Middle Temporal Gyrus, anterior division (L)",cortical
+111,21,"Middle Temporal Gyrus, anterior division (R)",cortical
+120,22,"Middle Temporal Gyrus, posterior division (L)",cortical
+121,23,"Middle Temporal Gyrus, posterior division (R)",cortical
+130,24,"Middle Temporal Gyrus, temporooccipital part (L)",cortical
+131,25,"Middle Temporal Gyrus, temporooccipital part (R)",cortical
+140,26,"Inferior Temporal Gyrus, anterior division (L)",cortical
+141,27,"Inferior Temporal Gyrus, anterior division (R)",cortical
+150,28,"Inferior Temporal Gyrus, posterior division (L)",cortical
+151,29,"Inferior Temporal Gyrus, posterior division (R)",cortical
+160,30,"Inferior Temporal Gyrus, temporooccipital part (L)",cortical
+161,31,"Inferior Temporal Gyrus, temporooccipital part (R)",cortical
+170,32,Postcentral Gyrus (L),cortical
+171,33,Postcentral Gyrus (R),cortical
+180,34,Superior Parietal Lobule (L),cortical
+181,35,Superior Parietal Lobule (R),cortical
+190,36,"Supramarginal Gyrus, anterior division (L)",cortical
+191,37,"Supramarginal Gyrus, anterior division (R)",cortical
+200,38,"Supramarginal Gyrus, posterior division (L)",cortical
+201,39,"Supramarginal Gyrus, posterior division (R)",cortical
+210,40,Angular Gyrus (L),cortical
+211,41,Angular Gyrus (R),cortical
+220,42,"Lateral Occipital Cortex, superior division (L)",cortical
+221,43,"Lateral Occipital Cortex, superior division (R)",cortical
+230,44,"Lateral Occipital Cortex, inferior division (L)",cortical
+231,45,"Lateral Occipital Cortex, inferior division (R)",cortical
+240,46,Intracalcarine Cortex (L),cortical
+241,47,Intracalcarine Cortex (R),cortical
+250,48,Frontal Medial Cortex (L),cortical
+251,49,Frontal Medial Cortex (R),cortical
+260,50,Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex) (L),cortical
+261,51,Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex) (R),cortical
+270,52,Subcallosal Cortex (L),cortical
+271,53,Subcallosal Cortex (R),cortical
+280,54,Paracingulate Gyrus (L),cortical
+281,55,Paracingulate Gyrus (R),cortical
+290,56,"Cingulate Gyrus, anterior division (L)",cortical
+291,57,"Cingulate Gyrus, anterior division (R)",cortical
+300,58,"Cingulate Gyrus, posterior division (L)",cortical
+301,59,"Cingulate Gyrus, posterior division (R)",cortical
+310,60,Precuneous Cortex (L),cortical
+311,61,Precuneous Cortex (R),cortical
+320,62,Cuneal Cortex (L),cortical
+321,63,Cuneal Cortex (R),cortical
+330,64,Frontal Orbital Cortex (L),cortical
+331,65,Frontal Orbital Cortex (R),cortical
+340,66,"Parahippocampal Gyrus, anterior division (L)",cortical
+341,67,"Parahippocampal Gyrus, anterior division (R)",cortical
+350,68,"Parahippocampal Gyrus, posterior division (L)",cortical
+351,69,"Parahippocampal Gyrus, posterior division (R)",cortical
+360,70,Lingual Gyrus (L),cortical
+361,71,Lingual Gyrus (R),cortical
+370,72,"Temporal Fusiform Cortex, anterior division (L)",cortical
+371,73,"Temporal Fusiform Cortex, anterior division (R)",cortical
+380,74,"Temporal Fusiform Cortex, posterior division (L)",cortical
+381,75,"Temporal Fusiform Cortex, posterior division (R)",cortical
+390,76,Temporal Occipital Fusiform Cortex (L),cortical
+391,77,Temporal Occipital Fusiform Cortex (R),cortical
+400,78,Occipital Fusiform Gyrus (L),cortical
+401,79,Occipital Fusiform Gyrus (R),cortical
+410,80,Frontal Operculum Cortex (L),cortical
+411,81,Frontal Operculum Cortex (R),cortical
+420,82,Central Opercular Cortex (L),cortical
+421,83,Central Opercular Cortex (R),cortical
+430,84,Parietal Operculum Cortex (L),cortical
+431,85,Parietal Operculum Cortex (R),cortical
+440,86,Planum Polare (L),cortical
+441,87,Planum Polare (R),cortical
+450,88,Heschls Gyrus (includes H1 and H2) (L),cortical
+451,89,Heschls Gyrus (includes H1 and H2) (R),cortical
+460,90,Planum Temporale (L),cortical
+461,91,Planum Temporale (R),cortical
+470,92,Supracalcarine Cortex (L),cortical
+471,93,Supracalcarine Cortex (R),cortical
+480,94,Occipital Pole (L),cortical
+481,95,Occipital Pole (R),cortical
+1016,96,Brain-Stem (L),subcortical
+1116,97,Brain-Stem (R),subcortical
+2010,98,Thalamus (L),subcortical
+2049,99,Thalamus (R),subcortical
+3011,100,Caudate (L),subcortical
+3050,101,Caudate (R),subcortical
+4012,102,Putamen (L),subcortical
+4051,103,Putamen (R),subcortical
+5013,104,Pallidum (L),subcortical
+5052,105,Pallidum (R),subcortical
+6017,106,Hippocampus (L),subcortical
+6053,107,Hippocampus (R),subcortical
+7018,108,Amygdala (L),subcortical
+7054,109,Amygdala (R),subcortical
+8026,110,Accumbens (L),subcortical
+8058,111,Accumbens (R),subcortical

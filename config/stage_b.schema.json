@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["project_root", "stage_a_manifest", "stage_a_success", "atlases", "disease_datasets", "protocols", "variant", "seed", "seed_source", "outer", "inner", "nested_plan", "identity", "storage"],
+  "properties": {
+    "project_root": {"type": "string", "minLength": 1},
+    "stage_a_manifest": {"type": "string", "minLength": 1},
+    "stage_a_success": {"type": "string", "minLength": 1},
+    "atlases": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+    "disease_datasets": {"type": "array", "minItems": 4, "maxItems": 4, "uniqueItems": true, "items": {"type": "string", "not": {"const": "fcp"}}},
+    "protocols": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"enum": ["LOSO", "pooled10_site_label"]}},
+    "variant": {"const": "main"},
+    "seed": {"type": "integer", "minimum": 0},
+    "seed_source": {"type": "string", "minLength": 1},
+    "outer": {
+      "type": "object",
+      "required": ["pooled_splits", "pooled_strata"],
+      "properties": {
+        "pooled_splits": {"const": 10},
+        "pooled_strata": {"const": ["site_id", "label"]}
+      }
+    },
+    "inner": {
+      "type": "object",
+      "required": ["requested_splits", "requested_strata", "fallback_splits", "fallback_strata", "minimum_train_per_class"],
+      "properties": {
+        "requested_splits": {"const": 5},
+        "requested_strata": {"const": ["site_id", "label"]},
+        "fallback_splits": {"const": 2},
+        "fallback_strata": {"const": ["label"]},
+        "minimum_train_per_class": {"const": 10}
+      }
+    },
+    "nested_plan": {
+      "type": "object",
+      "required": ["base_oof", "base_c_tuning", "strict_meta_oof", "membership_storage"],
+      "properties": {
+        "base_oof": {"const": true},
+        "base_c_tuning": {"const": true},
+        "strict_meta_oof": {"const": true},
+        "membership_storage": {"const": "hash_reconstruct"}
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["cross_dataset_key", "fold_index_base", "task_id_separator"],
+      "properties": {
+        "cross_dataset_key": {"const": ["dataset_id", "sample_key"]},
+        "fold_index_base": {"const": 0},
+        "task_id_separator": {"const": "__"}
+      }
+    },
+    "storage": {
+      "type": "object",
+      "required": ["group_pattern", "copy_demographics", "copy_fc"],
+      "properties": {
+        "group_pattern": {"const": "outputs/splits/{atlas}/{dataset}/{protocol}"},
+        "copy_demographics": {"const": false},
+        "copy_fc": {"const": false}
+      }
+    }
+  }
+}

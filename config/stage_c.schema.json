@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["project_root", "stage_a_manifest", "stage_b_manifest", "atlases", "disease_datasets", "protocols", "preprocessing", "normative", "models", "execution", "storage"],
+  "properties": {
+    "project_root": {"type": "string"},
+    "stage_a_manifest": {"type": "string"},
+    "stage_b_manifest": {"type": "string"},
+    "atlases": {"type": "array", "minItems": 4},
+    "disease_datasets": {"type": "array", "minItems": 4},
+    "protocols": {"type": "array", "minItems": 2},
+    "preprocessing": {"type": "object", "required": ["imputation", "ridge_alpha", "discriminative_covariates", "normative_covariates"]},
+    "normative": {"type": "object", "required": ["max_prototypes", "minimum_health_reference", "shrinkage", "fcp_crossfit_splits"]},
+    "models": {"type": "object", "required": ["base_c_grid", "meta_c_grid", "selection_metric", "tie_break"]},
+    "execution": {"type": "object", "required": ["minimum_train_per_class", "tuning_workers", "resume", "overwrite"]},
+    "storage": {"type": "object", "required": ["fold_pattern", "stage_dir", "allow_pickle"]}
+  }
+}

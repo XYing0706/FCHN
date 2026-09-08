@@ -1,0 +1,58 @@
+project_root: C:\XY\FedTopo-Brain\CHyCR_20260621\FCHN_20260825
+stage_a_manifest: outputs/stage_a/stage_a_manifest.json
+stage_b_manifest: outputs/stage_b/stage_b_manifest.json
+atlases: [HO112, AAL116, Dosenbach160, CC200]
+disease_datasets: [adhd, abide, abide2, mdd]
+protocols: [LOSO, pooled10_site_label]
+variant: full_fchn
+seed: 20260625
+demographics:
+  canonical_sex: 0=male;1=female
+  adhd_rule: raw 0=female;1=male -> canonical 1,0
+  other_rule: raw 1=male;2=female -> canonical 0,1
+  adhd_codebook: config/demographic_metadata/ADHD-200_PhenotypicKey.pdf
+  adhd_codebook_sha256: fdf5f577b376027e5191182eb69d58864005c9a116553da4128139f0b48206e9
+preprocessing:
+  imputation: edgewise_train_median
+  ridge_alpha: 1.0
+  discriminative_covariates: [age, age_squared, sex, mean_fd, log_scan_length]
+  normative_covariates: [age, age_squared, sex, log_scan_length]
+  continuous_covariates: [age, age_squared, mean_fd, log_scan_length]
+  missing_covariate_policy: exclude_with_reason
+  variance_floor: 1.0e-6
+views:
+  fc_pca_max: 0
+  hofc_pca_max: 128
+  normative_residual_pca_max: 32
+  normative_summary_count: 10
+normative:
+  max_prototypes: 8
+  minimum_health_reference: 10
+  k_rule_divisor: 10
+  kmeans_n_init: 10
+  local_variance_minimum: 3
+  variance_ddof: 0
+  variance_floor: 1.0e-6
+  shrinkage: 0.10
+  fcp_crossfit_splits: 5
+  fcp_crossfit_strata: [site_id]
+models:
+  solver: liblinear
+  class_weight: null
+  max_iter: 5000
+  probability_epsilon: 1.0e-12
+  base_c_grid: [0.003, 0.01, 0.03, 0.1, 0.3, 1, 3]
+  meta_c_grid: [0.03, 0.1, 0.3, 1, 3]
+  selection_metric: pooled_log_loss
+  tie_break: smaller_c
+  platt_c: 1.0
+execution:
+  minimum_train_per_class: 10
+  tuning_workers: 2
+  resume: true
+  overwrite: false
+storage:
+  fold_pattern: outputs/stage_c/folds/{atlas}/{dataset}/{protocol}/{outer_task_id}
+  stage_dir: outputs/stage_c
+  copy_fc: false
+  allow_pickle: false

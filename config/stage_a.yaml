@@ -1,0 +1,78 @@
+project_root: C:\XY\FedTopo-Brain\CHyCR_20260621\FCHN_20260825
+data_root: C:\XY\FedTopo-Brain\SSL\data
+datasets:
+  - adhd
+  - abide
+  - abide2
+  - mdd
+  - fcp
+atlases:
+  - HO112
+  - AAL116
+  - Dosenbach160
+  - CC200
+theoretical_roi_count:
+  HO112: 112
+  AAL116: 116
+  Dosenbach160: 160
+  CC200: 200
+global_column_start_1based:
+  HO112: 117
+  AAL116: 1
+  Dosenbach160: 1409
+  CC200: 229
+manifest_files:
+  adhd: manifest_adhd.csv
+  abide: manifest_abide.csv
+  abide2: manifest_abide2.csv
+  mdd: manifest_mdd.csv
+  fcp: manifest_FCP.csv
+roi_mask_files:
+  adhd: roi_mask_adhd.csv
+  abide: roi_mask_abide.csv
+  abide2: roi_mask_abide2.csv
+  mdd: roi_mask_mdd.csv
+  fcp: roi_mask_FCP.csv
+demographic_files:
+  adhd: ADHD200_Phenotypic_ChaoganYan.csv
+  abide: RfMRIMaps_ABIDE_Phenotypic.csv
+  abide2: RfMRIMaps_ABIDE2_Phenotypic.csv
+  mdd: REST-meta-MDD-PhenotypicData_WithHAMDSubItem_V4.xlsx
+  fcp: FCP_RfMRIMaps_Info.csv
+demographic_encoding:
+  adhd: latin1
+  abide: utf-8
+  abide2: latin1
+  fcp: utf-8
+label_semantics:
+  adhd: {0: HC, 1: ADHD}
+  abide: {0: HC, 1: ASD}
+  abide2: {0: HC, 1: ASD}
+  mdd: {0: HC, 1: MDD}
+  fcp: {0: healthy_normative_reference}
+sex_encoding_rule:
+  adhd: source Gender raw 0/1; semantic mapping not stated in available source snapshot
+  abide: source SEX 1=male;2=female
+  abide2: source SEX 1=male;2=female
+  mdd: source Sex 1=male;2=female
+  fcp: source Sex m/M=1=male;f/F=2=female
+identity:
+  sample_key_rule: subject_id
+  dataset_namespace_required: true
+  site_id_rule: "{dataset_id}::{source_site_as_string}"
+  roi_uid_rule: "{atlas_id_lower}:roi{roi_original_index_3digit}"
+  edge_uid_rule: "{roi_uid_i}--roi{roi_original_index_j_3digit}"
+  roi_original_index_base: 1
+  global_original_column_base: 1
+  matrix_position_base: 0
+units:
+  age: years
+  scan_length: timepoints
+  invalid_ratios: fraction_0_to_1
+qc:
+  subject_invalid_edge_ratio: 0.05
+  roi_incident_invalid_ratio: 0.30
+storage:
+  unit_pattern: outputs/cells/{dataset}/{atlas}
+  copy_fc: false
+  allow_pickle: false

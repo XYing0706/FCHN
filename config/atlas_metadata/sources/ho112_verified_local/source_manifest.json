@@ -1,0 +1,68 @@
+﻿{
+    "schema_version":  1,
+    "prepared_date":  "2026-07-22",
+    "ho112_contract":  "DPABI YCG Harvard-Oxford cortical 96 followed by subcortical 16",
+    "dpabi_repository":  "https://github.com/Chaogan-Yan/DPABI/tree/master/Templates",
+    "dpabi_tree_sha":  "8d4b16e46be65cce93662e34e1cfa22bd40d98dc",
+    "yeo_release":  "https://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "yeo_archive_sha256":  "383499e786477bfb56671da85ba47e72f118105866ca9a7a950f5a79abcbcd8a",
+    "fsl_verification_archive":  "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "fsl_verification_archive_sha256":  "43f3cf29ea8b019d15247428c9a26569045f0637d5c40d144da821a6c324cfcf",
+    "files":  [
+                  {
+                      "path":  "derived/ho112_dpabi_labels.csv",
+                      "sha256":  "9b8780032f6fc5b40a784a7aff91988978409e0521c20f0dcc1161b1bbecd077",
+                      "bytes":  5603
+                  },
+                  {
+                      "path":  "derived/yeo2011_7networks_labels.csv",
+                      "sha256":  "d00c326658c04094b05579c7a00636dcf0a30345d14db98767265b9c8e23d32e",
+                      "bytes":  128
+                  },
+                  {
+                      "path":  "dpabi_ho112/HarvardOxford-cort-maxprob-thr25-2mm_YCG.nii",
+                      "sha256":  "c0b10df6ce66988e2d87bee067bd7badaf80506a1dd63b3c38b1dcac28423109",
+                      "bytes":  1805610
+                  },
+                  {
+                      "path":  "dpabi_ho112/HarvardOxford-cort-maxprob-thr25-2mm_YCG_Labels.mat",
+                      "sha256":  "46193127eb5b88c6ddaa9cffb1217a49d0306308888314abc22bc43a70ae1058",
+                      "bytes":  3976
+                  },
+                  {
+                      "path":  "dpabi_ho112/HarvardOxford-sub-maxprob-thr25-2mm_YCG.nii",
+                      "sha256":  "0c3c54925c0e1528118c32eeaa33d2c56d396e5512620a0ca35606a5c72aecb8",
+                      "bytes":  1805610
+                  },
+                  {
+                      "path":  "dpabi_ho112/HarvardOxford-sub-maxprob-thr25-2mm_YCG_Labels.mat",
+                      "sha256":  "30b0006f37fecedc03560f70d6baa7ba7026e158f8634df94cf101086c3c618d",
+                      "bytes":  851
+                  },
+                  {
+                      "path":  "dpabi_ho112/HarvardOxford_Atlas_NewIndex_YCG.xlsx",
+                      "sha256":  "61641810e4d9b01b6bc1770d6c69e23bacbb06a06ce7eab65ffb9e2fcb0036d7",
+                      "bytes":  44549
+                  },
+                  {
+                      "path":  "yeo2011/Yeo2011_7Networks_ColorLUT.txt",
+                      "sha256":  "f6e68af76dffac569c4e6b5d7cfe13036e5ce0a702192a3774ddae48af985e26",
+                      "bytes":  288
+                  },
+                  {
+                      "path":  "yeo2011/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz",
+                      "sha256":  "a11cfeba3c88e25b6cd9c6d4b542ef67d3587bc674023bb8661447f213329d3f",
+                      "bytes":  338795
+                  },
+                  {
+                      "path":  "yeo2011/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask.nii.gz",
+                      "sha256":  "c8e2ee01cd23beb1c5424980e0922cce7417c26e3176432dd0074518144851d3",
+                      "bytes":  271559
+                  },
+                  {
+                      "path":  "yeo2011/Yeo_JNeurophysiol11_MNI152_README",
+                      "sha256":  "839f1990d7c4b058565d7f9beeaf00fabef4bd49510da366586856f730848086",
+                      "bytes":  6122
+                  }
+              ]
+}

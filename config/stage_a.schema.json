@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["project_root", "data_root", "datasets", "atlases", "theoretical_roi_count", "global_column_start_1based", "manifest_files", "roi_mask_files", "demographic_files", "demographic_encoding", "label_semantics", "sex_encoding_rule", "identity", "units", "qc", "storage"],
+  "properties": {
+    "project_root": {"type": "string", "minLength": 1},
+    "data_root": {"type": "string", "minLength": 1},
+    "datasets": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"type": "string"}},
+    "atlases": {"type": "array", "minItems": 4, "uniqueItems": true, "items": {"type": "string"}},
+    "theoretical_roi_count": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+    "global_column_start_1based": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 1}},
+    "manifest_files": {"type": "object", "additionalProperties": {"type": "string"}},
+    "roi_mask_files": {"type": "object", "additionalProperties": {"type": "string"}},
+    "demographic_files": {"type": "object", "additionalProperties": {"type": "string"}},
+    "demographic_encoding": {"type": "object", "additionalProperties": {"type": "string"}},
+    "label_semantics": {"type": "object"},
+    "sex_encoding_rule": {"type": "object", "additionalProperties": {"type": "string"}},
+    "identity": {
+      "type": "object",
+      "required": ["sample_key_rule", "dataset_namespace_required", "site_id_rule", "roi_uid_rule", "edge_uid_rule", "roi_original_index_base", "global_original_column_base", "matrix_position_base"],
+      "properties": {
+        "sample_key_rule": {"const": "subject_id"},
+        "dataset_namespace_required": {"const": true},
+        "site_id_rule": {"type": "string"},
+        "roi_uid_rule": {"type": "string"},
+        "edge_uid_rule": {"type": "string"},
+        "roi_original_index_base": {"const": 1},
+        "global_original_column_base": {"const": 1},
+        "matrix_position_base": {"const": 0}
+      }
+    },
+    "units": {
+      "type": "object",
+      "required": ["age", "scan_length", "invalid_ratios"],
+      "properties": {
+        "age": {"const": "years"},
+        "scan_length": {"const": "timepoints"},
+        "invalid_ratios": {"const": "fraction_0_to_1"}
+      }
+    },
+    "qc": {"type": "object", "required": ["subject_invalid_edge_ratio", "roi_incident_invalid_ratio"], "properties": {"subject_invalid_edge_ratio": {"type": "number", "minimum": 0, "maximum": 1}, "roi_incident_invalid_ratio": {"type": "number", "minimum": 0, "maximum": 1}}},
+    "storage": {"type": "object", "required": ["unit_pattern", "copy_fc", "allow_pickle"], "properties": {"unit_pattern": {"type": "string"}, "copy_fc": {"type": "boolean"}, "allow_pickle": {"type": "boolean"}}}
+  }
+}
